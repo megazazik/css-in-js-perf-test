@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Renderer } from './renderer';
 import styles from './styles.module.css';
 import { createUseStyles } from 'react-jss';
+import { newWithOldJsx } from './oldJsx';
 
 export const Runner = () => {
 	const [lastDuration, setDuration] = React.useState(0);
@@ -29,7 +30,8 @@ export const Runner = () => {
 	const [type, setType] = React.useState('CSS');
 
 	const factories = {
-		JSX: newWithJsx,
+		// JSX: newWithJsx,
+		JSX: newWithOldJsx,
 		JSXCached: newWithJsxCached,
 		JSS: newWithJss,
 		CSS: newWithCssModules,
