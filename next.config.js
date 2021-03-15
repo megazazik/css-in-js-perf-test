@@ -1,7 +1,9 @@
+const webpack = require('webpack');
+
 module.exports = {
-	webpack: (config, { defaultLoaders }) => {
+	webpack: (config, { defaultLoaders, dev }) => {
 		config.module.rules.push({
-			test: /\.jsx.css$/,
+			test: /\.css$/,
 			use: [
 				defaultLoaders.babel,
 				{
@@ -13,6 +15,12 @@ module.exports = {
 			],
 		});
 
+		config.devtool = 'source-map';
+		config.mode = 'development';
+		config.optimization.minimize = false;
+		config.optimization.minimizer = [];
+
 		return config;
 	},
+	productionBrowserSourceMaps: true,
 };
