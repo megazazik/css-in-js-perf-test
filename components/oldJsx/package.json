@@ -2,13 +2,17 @@
   "name": "oldjsx",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.js -d dist"
   },
   "author": "lebedev.mv <lebedev.mv@tutu.ru>",
   "license": "ISC",
   "dependencies": {
-    "styled-jsx": "^3.3.1"
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "styled-jsx": "^2.2.7"
   }
 }

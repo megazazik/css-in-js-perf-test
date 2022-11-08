@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Runner } from '../components/runner';
+import { WithStylesComponent } from '../components/styles';
 
 export default function Home() {
 	return (
@@ -11,6 +12,10 @@ export default function Home() {
 			</Head>
 
 			<main className={styles.main}>
+				<WithStylesComponent />
+				<br />
+				<br />
+				<br />
 				<Runner />
 			</main>
 

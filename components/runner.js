@@ -2,7 +2,9 @@ import * as React from 'react';
 import { Renderer } from './renderer';
 import styles from './styles.module.css';
 import { createUseStyles } from 'react-jss';
-import { newWithOldJsx } from './oldJsx';
+// import { createMyDynamic } from '../components/build/dynamic';
+import { createMyDynam } from '../components/build/dynam';
+// import { newWithOldJsx } from './oldJsx';
 
 export const Runner = () => {
 	const [lastDuration, setDuration] = React.useState(0);
@@ -31,7 +33,9 @@ export const Runner = () => {
 
 	const factories = {
 		// JSX: newWithJsx,
-		JSX: newWithOldJsx,
+		// JSX: newWithOldJsx,
+		// JSX: createMyDynamic,
+		JSX: createMyDynam,
 		JSXCached: newWithJsxCached,
 		JSS: newWithJss,
 		CSS: newWithCssModules,

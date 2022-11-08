@@ -1,4 +1,4 @@
-export const createMyDynam = (i) => {
+export const createMyDynam = (i, j) => {
 	const color = `#${i}${i}${i}`;
 
 	return () => {
@@ -8,6 +8,7 @@ export const createMyDynam = (i) => {
 				<style jsx>{`
 					.myClass {
 						color: ${color};
+						z-index: ${j};
 					}
 				`}</style>
 			</>

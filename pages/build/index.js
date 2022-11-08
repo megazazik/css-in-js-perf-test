@@ -5,7 +5,7 @@ import { MyFileComponentForBuild } from '../../components/build/file';
 import { MyInlineComponentForBuild } from '../../components/build/inline';
 import { MyCssComponentForBuild } from '../../components/build/variable';
 import { createMyDynamic } from '../../components/build/dynamic';
-import { createMyDynam } from '../../components/oldJsx/dynam';
+// import { createMyDynam } from '../../components/oldJsx/dynam';
 
 export default function Home() {
 	const [hidden, setHidden] = React.useState(true);
@@ -21,12 +21,12 @@ export default function Home() {
 				<MyInlineComponentForBuild />
 				<MyCssComponentForBuild />
 
-				{Array(10)
+				{/* {Array(10)
 					.fill(0)
 					.map((_, i) => {
 						const Component = createMyDynam(i);
 						return <Component key={i} />;
-					})}
+					})} */}
 				<div>
 					<button onClick={() => setHidden(false)}>
 						Show dynamic

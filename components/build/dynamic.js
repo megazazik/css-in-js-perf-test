@@ -1,9 +1,10 @@
 import css from 'styled-jsx/css';
 
-export const createMyDynamic = (i) => {
+export const createMyDynamic = (i, j) => {
 	var myClass = css`
 		.myClass {
-			color: #${i}${i}${i};
+			color: brown;
+			left: ${'0.' + i + j};
 		}
 	`;
 
@@ -12,7 +13,9 @@ export const createMyDynamic = (i) => {
 	return () => {
 		return (
 			<>
-				<div className="myClass">Контент компонента</div>
+				<div className="myClass">
+					{j}. Item{i}
+				</div>
 				<style jsx>{myClass}</style>
 			</>
 		);
